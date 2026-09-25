@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:8080/api/v1';
+const baseUrl = 'https://green-api-test-task-dt5w.onrender.com/api/v1';
 const settingsEndpoint = `${baseUrl}/settings`;
 const stateEndpoint = `${baseUrl}/state`;
 const textMessageEndpoint = `${baseUrl}/text-message`;
