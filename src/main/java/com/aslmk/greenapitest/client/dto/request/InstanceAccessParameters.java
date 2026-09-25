@@ -1,3 +1,7 @@
 package com.aslmk.greenapitest.client.dto.request;
 
-public record InstanceAccessParameters(String idInstance, String apiTokenInstance) {}
+import jakarta.validation.constraints.NotBlank;
+
+public record InstanceAccessParameters(
+        @NotBlank String idInstance,
+        @NotBlank String apiTokenInstance) {}

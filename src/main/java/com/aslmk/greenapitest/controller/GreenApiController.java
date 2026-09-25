@@ -7,6 +7,7 @@ import com.aslmk.greenapitest.client.dto.request.SendTextMessageRequest;
 import com.aslmk.greenapitest.client.dto.response.InstanceSettingsResponse;
 import com.aslmk.greenapitest.client.dto.response.SendMessageResponse;
 import com.aslmk.greenapitest.client.dto.response.StateInstanceResponse;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -19,22 +20,22 @@ public class GreenApiController {
     }
 
     @PostMapping("/settings")
-    public InstanceSettingsResponse getSettings(@RequestBody InstanceAccessParameters request) {
+    public InstanceSettingsResponse getSettings(@Valid @RequestBody InstanceAccessParameters request) {
         return apiClient.getSettings(request);
     }
 
     @PostMapping("/state")
-    public StateInstanceResponse getStateInstance(@RequestBody InstanceAccessParameters request) {
+    public StateInstanceResponse getStateInstance(@Valid @RequestBody InstanceAccessParameters request) {
         return apiClient.getStateInstance(request);
     }
 
     @PostMapping("/text-message")
-    public SendMessageResponse sendTextMessage(@RequestBody SendTextMessageRequest request) {
+    public SendMessageResponse sendTextMessage(@Valid @RequestBody SendTextMessageRequest request) {
         return apiClient.sendMessage(request);
     }
 
     @PostMapping("/file-message")
-    public SendMessageResponse sendFileMessage(@RequestBody SendFileByUrlRequest request) {
+    public SendMessageResponse sendFileMessage(@Valid @RequestBody SendFileByUrlRequest request) {
         return apiClient.sendFileByUrl(request);
     }
 }

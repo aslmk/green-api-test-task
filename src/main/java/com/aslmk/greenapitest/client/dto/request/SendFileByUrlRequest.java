@@ -1,6 +1,10 @@
 package com.aslmk.greenapitest.client.dto.request;
 
-public record SendFileByUrlRequest(InstanceAccessParameters instanceParameters,
-                                   String chatId,
-                                   String urlFile,
-                                   String fileName) {}
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
+public record SendFileByUrlRequest(@NotNull @Valid InstanceAccessParameters instanceParameters,
+                                   @NotBlank String chatId,
+                                   @NotBlank String urlFile,
+                                   @NotBlank String fileName) {}
