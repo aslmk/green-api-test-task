@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Тестовое задание GREEN-API</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+<div class="container">
+  <div class="left-col">
+
+    <div class="instance-info">
+      <div class="instance-credentials">
+        <input id="idInstance" type="text" placeholder="idInstance">
+        <input id="apiTokenInstance" type="text" placeholder="ApiTokenInstance">
+      </div>
+
+      <button class="btn" id="getSettings">getSettings</button>
+      <button class="btn" id="getStateInstance">getStateInstance</button>
+    </div>
+
+    <div class="send-message">
+      <input id="chatId" type="text" placeholder="77771234567">
+      <input id="textMessage" type="text" placeholder="Hello World">
+      <button id="sendMessage" class="btn">sendMessage</button>
+    </div>
+
+    <div class="send-file-message">
+      <div class="file-message-payload">
+        <input id="fileChatId" type="text" placeholder="77771234567">
+        <input id="urlFile" type="text" placeholder="https://my.site.com/img/horse.img">
+      </div>
+
+      <button id="sendFileByUrl" class="btn">sendFileByUrl</button>
+    </div>
+  </div>
+
+  <div class="right-col">
+    <label id="textarea-label" for="response">Ответ</label>
+    <textarea readonly id="response"></textarea>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

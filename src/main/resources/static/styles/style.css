@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+    border: black 1px solid;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+}
+
+.left-col {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+}
+
+.instance-info {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.instance-credentials {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 28px;
+    gap: 8px;
+}
+
+.send-message {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+    margin: 32px 0;
+}
+
+#message {
+    height: 80px;
+}
+
+.send-file-message {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.file-message-payload {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.right-col {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#textarea-label {
+    margin-bottom: 8px;
+}
+
+#response {
+    width: 300px;
+    height: 100%;
+}
